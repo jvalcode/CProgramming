@@ -1,11 +1,11 @@
-#include "carDealer.hpp"
+#include "CarDealer.hpp"
 
-void carDealer::addCar(const &Car car){
-    inventory.push_back(car); //adding car to inventory
+void CarDealer::addCar(const Car& car) {
+    inventory.push_back(car);
 }
 
-void carDealer::showInventory()const {
-    for(int i = 0; i< inventory.size();i++){
+void CarDealer::showInventory() const {
+    for (int i = 0; i < inventory.size(); i++) {
         inventory[i].print_info();
     }
 }

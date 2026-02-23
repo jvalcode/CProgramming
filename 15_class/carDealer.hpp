@@ -1,16 +1,18 @@
 #include "Car.hpp"
+#include <vector>
 
-#ifndef CAR.HPP
-#define CAR.HPP
+#ifndef CARDEALER_HPP
+#define CARDEALER_HPP
 
-class carDealer{
-
+class CarDealer {
 public:
-    void showInvetory() const; //
-    void addCar(const Car& car); //add car to inventory. changing inventory so we cant make it constant
+    void showInventory() const; // Print all cars
+    void addCar(const Car& car); // Add the given car to the inventory
 
 private:
     std::vector<Car> inventory;
 };
 
 #endif
+
+
