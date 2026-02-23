@@ -7,9 +7,12 @@ setMake("...");
 setModel("...");
 setYear(1900);
 setMPG(0);
+setMileage();
 }
 
-
+Car(std::string make_, std::string model_, int year, double mpg){
+            
+    }
 
 std::string Car::getMake() {
 return make;
@@ -52,4 +55,12 @@ void Car::print_info() {
     std::cout << model << std::endl;
     std::cout << year << std::endl;
     std::cout << MPG << std::endl;
+}
+
+void Car::refuel() {
+    std::cout << "This is refuel" << std::endl;
+}
+
+void Car::drive() {
+    std::cout << "This is drive" << std::endl;
 }

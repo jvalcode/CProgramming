@@ -1,28 +1,47 @@
 #include <string>
 #include <iostream>
+
+#ifndef CAR_HPP
+#define CAR_HPP
+
 class Car {
-public:
-// No-arg constructor
-Car();
-// TODO constructor with arguments
-// Get methods
-std::string getMake();
-std::string getModel();
-int getYear();
-double getMPG();
-// Set methods
+    
+    public:
+        // No-arg constructor
+        Car();
+        // TODO constructor with arguments
+        
+
+        // Get methods
+        std::string getMake();
+        std::string getModel();
+        int getYear();
+        double getMPG();
+        double distance();
+        
+        // Set methods
 void setMake(const std::string& make_);
 void setModel(const std::string& model_);
-void setYear(int year_);
-void setMPG(double MPG_);
-// Class methods
-void print_info();
-private:
-std::string make;
-std::string model;
-int year;
-double MPG;
+        void setYear(int year_);
+        void setMPG(double MPG_);
+        void setMileage(double mileage_);
+        
+        // Class methods
+        void print_info();
+        void refuel();
+        void drive();
+    
+    private:
+        std::string make;
+        std::string model;
+        int year;
+        double MPG;
 };
+
+#endif
+//this is inclusion guard
+
+
 /*
 TODO
 Mileage: car's mileage
