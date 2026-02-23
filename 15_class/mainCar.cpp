@@ -1,4 +1,8 @@
 #include "Car.hpp"
+#include "carDealer.cpp"
+
+bool isEfficient(const &Car car);
+
 
 
 int main(void) {
@@ -23,7 +27,7 @@ int main(void) {
     lakeland_ferrari.addCar(ferrari_superGT);
 
     //show invetory
-    lakelandInventory.show_invetory()
+    lakeland_ferrari.show_invetory();
 
 
     ferrari.print_info();
@@ -32,3 +36,8 @@ int main(void) {
     
     return 0;
 }
+
+bool isEfficient(const &Car car){
+    return ((car.getMPG() > 20.0) ? true : false);
+}
+
