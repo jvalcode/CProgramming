@@ -6,9 +6,13 @@ Car::Car() {
     setModel("...");
     setYear(1900);
     setMPG(0);
+
+    fuel_capacity = 12.0;
+    fuel_level = 0.0;
+
 }
 
-Car::Car(const std::string& make_, const std::string& model_, int year, double mpg) {
+Car::Car(const std::string& make_, const std::string& model_, int year, double mpg, double fuel_capacity) {
     setMake(make_);
     setModel(model_);
     setYear(year);
@@ -56,4 +60,5 @@ void Car::print_info() const {
     std::cout << model << std::endl;
     std::cout << year << std::endl;
     std::cout << MPG << std::endl;
+    std::cout << fuel_capacity << std::endl;
 }
