@@ -70,7 +70,7 @@ void Car::print_info() const {
     std::cout << year << std::endl;
     std::cout << MPG << std::endl;
     std::cout << fuel_level << std::endl;
-    std::cout << milage << std::endl;
+    std::cout << mileage << std::endl;
 }
 
 void Car::refuel(double gallons) {
