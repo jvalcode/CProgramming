@@ -5,6 +5,26 @@ bool isEfficient(const Car& car);
 
 
 int main(void) {
+
+    Car toyota ("Toyota","Corolla", 2020, 23.2, 12.0);
+
+    toyota.refuel(5);
+
+    double distance, gallons;
+
+    while (true) {
+        std::cout << "Enter gallons: ";
+        std::cin >> gallons;
+
+        std::cout << "Enter distance: ";
+        std::cin >> distance;
+
+        toyota.refuel(gallons);
+        toyota.drive(distance);
+        toyota.print_info();
+    }
+
+
     // Create an object of Car class
     Car ferrari_f50;
     ferrari_f50.setMake("Ferrari");

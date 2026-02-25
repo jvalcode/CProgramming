@@ -17,7 +17,7 @@ public:
     std::string getModel() const; 
     int getYear() const; 
     double getMPG() const;
-    double getFuelLvl();
+    double getFuelLevel();
     
     // Set methods
     void setMake(const std::string& make_);
@@ -28,12 +28,14 @@ public:
     // Class methods
     void print_info() const;
     void refuel(double gallons); 
+    void drive(double distance);
 
 private:
     std::string make;
     std::string model;
     int year;
     double MPG;
+    
     double milage;
     double fuel_capacity;
     double fuel_level;
