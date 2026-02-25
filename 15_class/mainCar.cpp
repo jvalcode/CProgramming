@@ -3,7 +3,6 @@
 
 bool isEfficient(const Car& car);
 
-
 int main(void) {
 
     Car toyota ("Toyota","Corolla", 2020, 23.2, 12.0);
@@ -24,30 +23,16 @@ int main(void) {
         toyota.print_info();
     }
 
-
-    // Create an object of Car class
-    Car ferrari_f50;
-    ferrari_f50.setMake("Ferrari");
-    ferrari_f50.setModel("F50");
-    ferrari_f50.setYear(2025);
-    ferrari_f50.setMPG(13.5);
-
-    Car ferrari_superGT("Ferrari", "Super GT", 2021, 10.7);
-    Car ferrari_spider("Ferrari", "Spider", 2020, 11.7);
-
-
     // Create CarDealer
-    CarDealer lakeland_ferrari;
+    CarDealer lakeland_dealer;
 
     // Add inventory
-    lakeland_ferrari.addCar(ferrari_f50);
-    lakeland_ferrari.addCar(ferrari_spider);
-    lakeland_ferrari.addCar(ferrari_superGT);
+    lakeland_dealer.addCar(toyota);
 
     // Show the inventory
-    lakeland_ferrari.showInventory();
+    lakeland_dealer.showInventory();
 
-    std::cout << isEfficient(ferrari_spider) << std::endl;
+    std::cout << isEfficient(toyota) << std::endl;
 
     return 0;
 }
