@@ -1,79 +1,74 @@
-#include<iostream>
+#include <iostream>
 
-//abstract class
+// Abstract class
 class Weapon {
 public:
-//abstract function becauseWeapon we set it equal to zero
-    virtual void use() = 0;
+    virtual void use() = 0; // Abstract function
 };
 
 class Gun : public Weapon {
 public:
-    void useWeapon(const Gun& gun) override {
+    void use() override {
         std::cout << "BANG!" << std::endl;
     }
 };
 
-class Player{
-public:
-    void useWeaponWeapon(Weapon& weapon) {
-        weapon.useWeapon();
-    }
-
-
-private:
-
-};
-
-
 class MachineGun : public Gun {
- public:
+public:
     MachineGun() : magazine(20) {
- }
-
+    }
     void use() override {
-        while(magazine--){
-            std::cout << "BANG";
-        }
-        std::cout << '\n';
-        magazine = 20;
-}
-
-
- private:
+        while (magazine--) {
+        std::cout << "BANG ";
+    }
+    std::cout << '\n';
+    magazine = 20;
+    }
+private:
     int magazine;
 };
 
-class Knive : public Gun {
+class Bazooka : public Gun {
+public:
+    void use() override {
+        std::cout << "BOOOOOM!" << std::endl;
+    }
+};
+
+class Knife : public Weapon {
 public:
     void use() override {
         std::cout << "SLASH!" << std::endl;
     }
 };
 
+class Player {
+public:
+    void useWeapon(Weapon& weapon) {
+        weapon.use();
+    }
+};
+
 int main(void) {
     Gun gun;
     MachineGun mg;
-
     mg.use();
-
-    //create array of guns
+    std::cout << "Array\n";
+    // Create an array of guns
     Gun* guns[2] = {&gun, &mg};
 
-    for (int i = 0; i<2; i++){
+    for (int i = 0; i < 2; i++) {
         guns[i]->use();
     }
-
+    std::cout << "Player\n";
+    Bazooka bazooka;
+    Knife knife;
     Player simple;
+    
     simple.useWeapon(gun);
     simple.useWeapon(mg);
     simple.useWeapon(bazooka);
-
-
+    simple.useWeapon(knife);
+    
     return 0;
 }
-
-class Bazooka : public Gun {
-public:
-    std::cout << "BOOM" << std::endl; 
-};
