@@ -1,6 +1,11 @@
 #include <iostream>
 
-class Elf {
+class Character {
+public:
+
+};
+
+class Elf : virtual public Character {
 public:
     Elf(){
         std::cout << "I am Elf!" << std::endl;
@@ -25,11 +30,15 @@ class ElfWarrior : public Elf, public Warrior {
 
 };
 
+
+
 int main (void) {
     ElfWarrior buddy;
 
     buddy.fight();
     buddy.think();
+
+    std::cout << 
 
     return 0;
 }
